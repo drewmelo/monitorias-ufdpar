@@ -1,0 +1,841 @@
+---
+title: |
+  <div style="display: flex; align-items: center;">
+    <span style="color: #313130; font-weight: bold; font-size: 2em;">Introdução ao</span>
+  <img src="logo/bibliometrix_logo.png" style="margin-left: 20px; height: 150px; margin-bottom: -40px;">
+  <object data="images/qrcode.svg" type="image/svg+xml" style="margin-left: 650px; height: 300px; position: absolute; top: 180px; right: 0;"></object>
+  </div>
+author:
+  - name: André Vitor Pereira de Melo
+    email: andre.melo@ufdpar.edu.br
+    affiliations: Universidade Federal do Delta do Parnaíba
+subtitle: "Monitoria I de Técnicas de Pesquisa em Economia"
+date: "2025-05-16"
+date-format: long
+lang: pt-BR
+format: 
+  revealjs: 
+    theme: [default, custom.scss]
+    transition: slide
+    background-transition: fade
+    slide-level: 2
+    logo: logo/ufdpar_logo.png
+    footer: "[https://github.com/drewmelo/introducao-R](https://github.com/drewmelo/introducao-R)"
+    slide-number: true
+    controls: true
+    smaller: true
+    scrollable: false
+    incremental: true
+    preview-links: true
+    background: 
+      class: "title-slide-bg"
+    include-after-body: title/clean_title_page.html
+    execute:
+      echo: true
+    bibliography: referencias.bib
+    csl: abnt.csl
+---
+
+# I - Introdução ao R {style="font-size:1.5em;"}
+
+# O que é a linguagem R? {.center .nonincremental}
+
+-   Ferramenta para análise de dados;
+    -   R é uma linguagem de programação orientada a objetos, criada para quem trabalha com **análise de dados e estatística** de forma estruturada.
+-   Versátil e com ampla aplicação;
+    -   Oferece ferramentas que permitem lidar com **grandes conjuntos de dados**, o que é muito útil em contextos atuais que envolvem *big data*.
+-   Tipagem fraca.
+    -   Permite operações entre diferentes tipos de dados sem a necessidade explícita de conversão.
+
+# Por que usar o R? {.center .nonincremental}
+
+-   Exploração e visualização de dados;
+    -   A linguagem oferece recursos avançados para criar gráficos e visualizações que ajudam **a entender melhor os dados e comunicar resultados de forma clara**.
+-   *Open-source*.
+    -   Por ser um *software* de código aberto, possui uma comunidade ativa que **desenvolve e compartilha pacotes**, por isso, o R dispõe de uma vasta gama de aplicações e suporte colaborativo.
+
+# O que é o RStudio? {.center .nonincremental}
+
+-   Ambiente integrado para programar em R;
+    -   O RStudio é um espaço pensado principalmente para quem usa R, reunindo tudo o que é necessário para escrever, rodar e revisar códigos com mais organização.
+-   Facilita o dia a dia com R.
+    -   Ele traz recursos como editor de scripts, gerenciador de projetos e ferramentas para depurar o código.
+
+# Passos da instalação {.center}
+
+::: columns
+::: {.column width="50%"}
+::: {.fragment .fade-in-then-semi-out}
+Visite [CRAN - The Comprehensive R Archive Network](https://cran.rstudio.com/) e baixe a linguagem, através de um arquivo executável, para seu sistema operacional;
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+Visite [RStudio Desktop](https://posit.co/download/rstudio-desktop/) e baixe o instalador para seu sistema operacional;
+:::
+
+::: {.fragment .fade-in}
+<p style="color: #028DB7">
+
+Siga as instruções fornecidas nos instaladores para completar o processo de instalação.
+
+</p>
+:::
+:::
+
+::: {.column width="50%"}
+![](logo/rstudio_logo.png){.absolute height="150"}
+![](logo/r_logo.png){.absolute height="200" bottom="50px"}
+:::
+:::
+
+# RStudio Cloud {.center .nonincremental}
+
+::: columns
+::: {.column width="50%"}
+::: {.fragment .fade-in-then-semi-out}
+Visite a [Posit Cloud](https://posit.cloud/) para acessar e utilizar o RStudio sem a necessidade de instalação local;
+:::
+
+::: {.fragment .fade-in}
+<p style="color: #028DB7">
+
+Necessário realizar **login** (através de uma conta Google, Github, entre outros) para acessar o RStudio Cloud.
+
+</p>
+:::
+:::
+
+::: {.column width="50%"}
+![](images/rstudio_cloud.png){.absolute .border .shadow-border height="300" width="600"}
+:::
+:::
+
+# Criação de um projeto {.center .nonincremental}
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px 10px; justify-items: center; align-items: center;">
+
+::: fragment
+<!-- Passo 1 -->
+<div style="text-align: center;">
+  <div style="font-weight: bold; color: #028DB7; font-size: 0.5em;">Passo 1:<a style="color: #313130;"> File > New Project. </a></div>
+  ![](images/00_r_project.png){.border .shadow-border width="350"}
+</div>
+:::
+::: fragment
+<!-- Passo 2 -->
+<div style="text-align: center;">
+  <div style="font-weight: bold; color: #028DB7; font-size: 0.5em;">Passo 2:<a style="color: #313130;"> Escolha “New Directory”. </a></div>
+  ![](images/01_r_project.png){.border .shadow-border width="350"}
+</div>
+:::
+::: fragment
+<!-- Passo 3 -->
+<div style="text-align: center;">
+  <div style="font-weight: bold; color: #028DB7; font-size: 0.5em;">Passo 3:<a style="color: #313130;"> Clique em “New Project”. </a></div>
+  ![](images/02_r_project.png){.border .shadow-border width="350"}
+</div>
+:::
+::: fragment
+<!-- Passo 4 -->
+<div style="text-align: center;">
+  <div style="font-weight: bold; color: #028DB7; font-size: 0.5em;">Passo 4: <a style="color: #313130;"> Digite o nome da sua pasta em <em>Directory name</em>, marque “Open in new session” e clique em “Create Project”. </a></div>
+  ![](images/03_r_project.png){.border .shadow-border width="350"}
+</div>
+:::
+
+</div>
+
+
+# Pacotes {.center}
+
+Os pacotes no R são coleções de funções e conjuntos de dados desenvolvidos pela comunidade.
+
+::: fragment
+```{r, results='hide', eval=FALSE}
+# Instalando o pacote
+install.packages("tidyverse", dependencies = TRUE)
+
+# Ativando o pacote
+library(tidyverse)
+```
+:::
+
+::: fragment
+E para descarregar ou remover pacotes:
+
+```{r, results='hide', eval=FALSE}
+# Desativar pacotes
+detach("tidyverse")
+
+# Desinstalar pacotes
+remove.packages("pacotes")
+```
+:::
+
+# Um pouco sobre tidyverse {.center .noincremental}
+
+::: {style="text-align: center; margin-top: 1em"}
+<div style="text-align: center;">
+
+![](images/tidyverse_circle.png){height="400"}
+
+<div style="margin-top: 4px; font-size: 0.6em; color: gray;">
+Fonte: @smith2019r.
+</div>
+
+</div>
+:::
+
+# Um pouco sobre tidyverse {.center visibility="uncounted"}
+
+O `tidyverse` oferece uma alternativa aos métodos base do R para análise de dados em dados organizados de forma “arrumada” (*tidy data*).
+
+::: fragment
+```{r, message=F, eval=FALSE}
+library(tidyverse)
+```
+:::
+
+::: fragment
+```{r, message=TRUE, echo=FALSE}
+library(tidyverse)
+```
+:::
+
+# Operador pipe {.center}
+
+O operador pipe no R é uma ferramenta poderosa para encadear operações e facilitar a leitura e escrita de código. Existem dois operadores de pipe comuns:
+
+-   Operador `%>%` (pipe do pacote `magrittr`)
+
+    -   O operador `%>%` é usado para encadear funções, passando o resultado de uma função como argumento para a próxima função.
+
+-   Operador `|>` (pipe do pacote base)
+
+    -   Introduzido no R 4.1.0, o operador pipe nativo `|>` é uma alternativa ao operador do `magrittr`, oferencendo uma maneira semelhante de encadear operações.
+
+# R como calculadora {.center}
+
+A linguagem R nos permite realizar cálculos simples e complexos, fornecendo operações aritméticas como adição, subtração, multiplicação, divisão e outras operações matemáticas.
+
+::: fragment
+```{r}
+# Operações Combinadas
+(5 + 3) * 2 - 4 / 2
+```
+:::
+
+-   Potência
+
+::: fragment
+```{r}
+2^3
+```
+:::
+
+# R como calculadora {.center visibility="uncounted"}
+
+-   Módulo
+
+::: fragment
+```{r}
+10 %% 3
+```
+:::
+
+-   Divisão inteira
+
+::: fragment
+```{r}
+10 %/% 3
+```
+:::
+
+-   Raiz Quadrada
+
+::: fragment
+```{r}
+sqrt(16)
+```
+:::
+
+# II - Estruturas e Manipulações de Dados {style="font-size:1.5em;"}
+
+# Tipos de estruturas de dados {.center .noincremental}
+
+::: columns
+::: {.column width="50%"}
+::: {.fragment .fade-in-then-semi-out}
+Na linguagem R, há várias estruturas de dados fundamentais que são usadas para armazenar e manipular informações de maneiras específicas.
+:::
+
+-   **Vetores**: Unidimensionais;
+-   **Matrizes**: Bidimensionais;
+-   **Data Frames**: Bidimensionais;
+-   **Arrays**: Multidimensionais;
+-   **Listas**: Flexíveis.
+:::
+
+::: {.column width="50%"}
+::: {.fragment .fade-in}
+<div style="text-align: center;">
+
+![](images/estruturas_de_dados.png){width="650" height="300"}
+
+<div style="margin-top: 4px; font-size: 0.6em; color: gray;">
+Fonte: @ceballos2013data.
+</div>
+
+</div>
+:::
+:::
+:::
+
+# Tipos de estruturas de dados {.center .nonincremental visibility="uncounted"}
+
+::: {style="text-align: center; margin-top: 1em"}
+<div style="text-align: center;">
+
+![](images/datatypes_dataframes.png){height="400"}
+
+<div style="margin-top: 4px; font-size: 0.6em; color: gray;">
+Fonte: @stauffer2025introduction.
+</div>
+
+</div>
+:::
+
+# O que são data frames? {.center .noincremental}
+
+Os *data frames* são estruturas de dados fundamentais no R, muito utilizadas para **armazenar conjuntos de dados tabulares**, onde as colunas podem conter **diferentes tipos de classes** (numéricos, caracteres, lógicos, etc.).
+
+-   Quanto a sua estrutura, temos:
+    -   **Nome das Colunas (variáveis):** Cada coluna em um *data frame* tem um nome que a identifica, representando seus respectivos atributos;
+    -   **Rótulos de Linhas (observações):** As linhas podem ser rotuladas para identificar cada observação de maneira única ou significativa.
+
+# O que são data frames? {.center visibility="uncounted"}
+
+::: {style="text-align: center; margin-top: 1em"}
+<div style="text-align: center;">
+
+![](images/schema_data.png){height="450"}
+
+<div style="margin-top: 4px; font-size: 0.6em; color: gray;">
+Fonte: @gfg2025dataframe.
+</div>
+
+</div>
+:::
+
+# O que são vetores? {.center .nonincremental}
+
+Um vetor é uma estrutura de dados que contém elementos do mesmo tipo. Pode ser numérico, de caracteres, lógico, etc.
+
+::: fragment
+```{r}
+#| code-line-numbers: "|2|5|8|"
+# Vetor numérico (inteiro)
+ano <- c(2022, 2023, 2024, 2025)
+
+# Vetor de caracteres
+revistas <- c("A", "B", "C", "B")
+
+# Vetor númerico (números reais)
+impacto <- c(2.75, 1.91, 5.23, 0.87)
+```
+:::
+
+# Criando data frames {.center}
+
+Podemos combinar os objetos `ano`, `revistas` e `impacto` em um *data frame*.
+
+::: fragment
+```{r}
+df <- data.frame(
+  autor = c("Ana", "João", "Gabriel", "Ana"),
+  revistas = revistas,
+  ano = ano,
+  impacto = impacto
+)
+
+df
+```
+:::
+
+# Data frames modernizados {.center}
+
+*Tibbles* são *data frames* modernizados, introduzidos pelo pacote `tibble` no `tidyverse`. Eles foram projetados para corrigir algumas das limitações dos *data frames* tradicionais e para melhorar a usabilidade.
+
+::: fragment
+```{r}
+dados <- tibble::as_tibble(df)
+
+dados
+```
+:::
+
+# Criando listas {.center}
+
+Uma lista é uma coleção ordenada de elementos que podem ser de diferentes tipos. Diferente de vetores, que só podem conter elementos de um único tipo, listas podem armazenar números, caracteres, vetores, *data frames* e até mesmo outras listas.
+
+::: fragment
+```{r}
+lista <- list(
+            dados,
+            hobbies = c("Leitura", "Esportes", "Música"),
+            cars = head(cars, 5),
+            mtcars = head(mtcars, 5)
+          )
+```
+:::
+
+# O que é o *dplyr*? {.center}
+
+-   Parte do `tidyverse`, o `dplyr` é um pacote do R que incorpora uma gramática para transformação de dados, ou seja, fornece funções (verbos) para fazer operações com tabelas (isto é, *data frames* ou *tibbles*);
+
+-   Ele permite filtrar, selecionar, organizar, transformar e resumir dados de forma encadeada. E qual a finalidade disso? **um código limpo**.
+
+- Principais funções (verbos)
+
+::: columns
+::: {.column width="50%" .fragment}
+`filter()`: filtra linhas (condições)
+
+`select()`: seleciona colunas
+
+`mutate()`: cria/edita colunas
+
+`arrange()`: ordena linhas
+:::
+::: {.column width="50%" .fragment}
+`summarise()` ou `reframe()`: resume dados
+
+`group_by()`: agrupa dados para sumarização
+:::
+:::
+
+# Operadores lógicos {.center}
+
+-   Operadores Relacionais:
+    -   Igual a (`==`);
+    -   Diferente de (`!=`);
+    -   Maior que (`>`);
+    -   Menor que (`<`);
+    -   Maior ou igual a (`>=`);
+    -   Menor ou igual a (`<=`);
+    -   Pertence a (`%in%`).
+
+-   Também podemos utilizar operadores lógicos, tais como **AND**,  **OR** e **NOT**, representados por `&`, `|` e `!`, respectivamente.
+
+# Utilizando dplyr na prática {.center}
+
+Com os nossos `dados`, podemos filtrar artigos a partir de 2023, calcular a média de impacto por revista e ordenar do maior para o menor.
+
+::: fragment
+```{r}
+dados |> 
+  filter(ano >= 2023) |> 
+  group_by(revistas) |> 
+  summarise(media_impacto = mean(impacto)) |> 
+  arrange(desc(media_impacto))
+```
+:::
+
+# Exportação de dados {.center}
+
+Exportar dados é uma tarefa comum no R, especialmente quando se deseja salvar resultados de análises ou compartilhar informações com outros usuários.
+
+::: {.number-list}
+(1) Exportando para CSV
+:::
+
+::: fragment
+```{r, eval=FALSE}
+write.csv(dados, file = "dados/dados.csv", row.names = FALSE)
+```
+:::
+
+::: {.number-list}
+(2) Exportando para Excel (*xlsx*)
+:::
+
+::: fragment
+```{r, eval=FALSE}
+# Ativando pacote
+library(openxlsx) # Necessário instalar
+
+write.xlsx(dados, file = "dados/dados.xlsx", rowNames = FALSE)
+```
+:::
+
+::: {.number-list}
+(3) Exportando para Texto (*txt*)
+:::
+
+::: fragment
+```{r, eval=FALSE}
+write.table(dados, file = "dados/dados.txt", sep = "\t", row.names = FALSE)
+```
+:::
+
+# Importação de dados {.center}
+
+Neste caso, ao importar dados no R, estaremos carregando conjuntos de dados externos para manipulação e/ou visualização.
+
+::: {.number-list}
+(1) Importando para CSV
+:::
+
+::: fragment
+```{r, eval=FALSE}
+readr::read_csv(file = "dados/dados.csv")
+```
+:::
+
+::: {.number-list}
+(2) Importando para Excel (*xlsx*)
+:::
+
+::: fragment
+```{r, eval=FALSE}
+# Ativando o pacote
+library(readxl) # Necessário instalar
+
+readxl::read_excel(path = "dados/dados.xlsx")
+```
+:::
+
+::: {.number-list}
+(3) Importando para Texto (*txt*)
+:::
+
+::: fragment
+```{r, eval=FALSE}
+read.table(file = "dados/dados.txt", header = TRUE, sep = "\t")
+```
+:::
+
+# Exercício de Fixação I {.center .center-x background-color="#00263A"}
+
+Hora de praticar!
+
+Acesse o arquivo **main.pdf**, que está dentro da pasta *atividade*, localizada em *"tecnicas-pesquisa-economia"* no repositório *monitorias-ufdpar*, ou clique [aqui](https://github.com/drewmelo/introducao-R/blob/master/atividade/atividade.pdf) para acessá-lo diretamente.
+
+# III - Bibliometria com o R {style="font-size:1.5em;"}
+
+# O que é bibliometria? {.center .noincremental}
+
+Bibliometria é um campo das áreas da biblioteconomia e da ciência da informação **que emprega o estudo quantitativo da produção científica**, através de métodos estatísticos e matemáticos para analisar publicações acadêmicas, como `artigos`, livros, teses e conferências.
+
+- Exemplos de estudos bibliométricos:
+   - `Contagem de publicações:` **Quantos artigos** sobre "sustentabilidade" foram publicados entre 2010 e 2020?
+   - `Análise de citações:` Qual é o artigo **mais citado** sobre Inteligência Artificial?
+   - `Análise de palavras-chave:` Quais são os termos **mais recorrentes** nas pesquisas sobre Mudanças Climáticas?
+
+# E qual a sua contribuição? {.center .noincremental}
+
+| Aplicação                          | Descrição                                                                 |
+|:------------------------------------|:-------------------------------------------------------------------------|
+| Mapeamento de áreas de conhecimento | Identificar tendências, tópicos emergentes ou temas em declínio em uma disciplina. |
+| Análise de tendências científicas   | Ver como um tema ganha ou perde relevância ao longo do tempo.             |
+| Avaliação de desempenho acadêmico   | Avaliar a produtividade de autores, universidades ou países (por número de publicações, citações etc.). |
+| Identificação de redes de colaboração | Descobrir grupos de pesquisa que atuam juntos (análise de coautoria).      |
+| Tomada de decisão em políticas científicas | Ajudar agências de fomento e universidades a definir prioridades de investimento em ciência. |
+
+# Pacote Bibliometrix {.center .noincremental}
+
+Assim como o `dplyr`, mencionado anteriormente, o `bibliometrix` também é um pacote do R criado para realizar análises bibliométricas completas, desde a importação dos dados até a construção de gráficos e redes científicas.
+
+- Criado por @aria2017bibliometrix, além de outros colaboradores a partir de 2017.
+   - Objetivo: fornecer uma solução *open-source* para análise bibliométrica e de ciência da ciência (*science mapping*);
+
+- Fontes de dados compatíveis:
+
+::: columns
+::: {.column width="33.33%" .fragment}
+<a style="color:#028DB7;">→</a>
+**Web of Science** (WoS)
+
+<a style="color:#028DB7;">→</a> **Scopus**
+
+**Dimensions.ai**
+:::
+::: {.column width="33.33%" .fragment}
+**PubMed**
+
+**CrossRef**
+
+**OpenAlex** (mais recente)
+:::
+::: {.column width="33.33%" .fragment}
+Coleta manual em formato **BibTeX** ou **CSV**
+:::
+:::
+
+# Acesso as bases de dados acadêmicas {.center}
+
+Para realizar análises bibliométricas no R, primeiro é necessário baixar os dados de bases acadêmicas confiáveis. 
+
+No Brasil, temos acesso gratuito a bases internacionais de alta qualidade por meio da:
+
+- Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES)
+   - O Portal de Periódicos da CAPES oferece acesso gratuito para estudantes, professores e pesquisadores de instituições públicas e privadas conveniadas.
+   - Por meio dele, é possível acessar bases como WoS, Scopus, ScienceDirect, SpringerLink, entre muitas outras.
+
+# Como acessar o Portal de Periódicos da CAPES? {.center}
+
+::: columns
+::: {.column width="50%"}
+::: {.fragment .fade-in-then-semi-out}
+Estando dentro da universidade (rede da instituição) ou
+:::
+
+::: {.fragment .fade-in}
+Pelo sistema de CAFe (Comunidade Acadêmica Federada), usando login e senha institucionais.
+:::
+:::
+
+::: {.column width="50%" .fragment}
+![](images/01_bibliometria.png){.absolute .border .shadow-border height="300" width="600"}
+:::
+:::
+
+# Passos para baixar dados bibliográficos
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px 10px; justify-items: center; align-items: center;">
+
+::: fragment
+<!-- Passo 1 -->
+<div style="text-align: center;">
+  <div style="font-weight: bold; color: #028DB7; font-size: 0.5em;">Passo 1:<a style="color: #313130;"> Acesso CAFe (login) > UFPI. </a></div>
+  ![](images/02_bibliometria.png){.border .shadow-border width="350"}
+</div>
+:::
+::: fragment
+<!-- Passo 2 -->
+<div style="text-align: center;">
+  <div style="font-weight: bold; color: #028DB7; font-size: 0.5em;">Passo 2:<a style="color: #313130;"> Clique em "Lista de bases e coleção". </a></div>
+  ![](images/03_bibliometria.png){.border .shadow-border width="350"}
+</div>
+:::
+::: fragment
+<!-- Passo 3 -->
+<div style="text-align: center;">
+  <div style="font-weight: bold; color: #028DB7; font-size: 0.5em;">Passo 3:<a style="color: #313130;"> Após a busca pela base, clique em "Ver no editor". </a></div>
+  ![](images/04_bibliometria.png){.border .shadow-border width="350"}
+</div>
+:::
+::: fragment
+<!-- Passo 4 -->
+<div style="text-align: center;">
+  <div style="font-weight: bold; color: #028DB7; font-size: 0.5em;">Passo 4: <a style="color: #313130;"> Interface da Scopus. </a></div>
+  ![](images/05_bibliometria.png){.border .shadow-border width="350"}
+</div>
+:::
+
+</div>
+
+# Operadores booleanos nas pesquisas acadêmica {.center}
+
+::: columns
+::: {.column width="50%"}
+- **AND**: inclui todos os termos;
+- **OR**: inclui qualquer um dos termos;
+- **NOT**: exclui termos indesejados
+:::
+
+::: {.column width="50%" .fragment}
+![](images/boolean.png){height="200" width="600"}
+:::
+:::
+
+::: {.fragment}
+*Ex.: Busca artigos que falem de Inflation e de pelo menos um dos temas citados.*
+```{verbatim}
+(Modern Monetary Theory OR Post-Keynesian Economics) AND Inflation
+```
+:::
+
+# Pesquisa avançada em bases acadêmicas {.center}
+
+::: {.number-list}
+(1) Web of Science 
+:::
+
+::: {.fragment}
+Permite criar pesquisas mais específicas usando filtros como tema, autor, instituição, tipo de documento, ano de publicação etc.
+
+```{verbatim}
+TS=("Modern Monetary Theory") AND PY=(2015-2024)
+```
+:::
+
+::: {.number-list}
+(2) Scopus
+:::
+
+::: {.fragment}
+Assim como na Web of Science, permite construir consultas específicas, com vários critérios.
+
+```{verbatim}
+TITLE-ABS-KEY("Modern Monetary Theory") AND PUBYEAR > 2014 AND PUBYEAR < 2025
+```
+:::
+
+#  Importação de dados bibliográficos {.center}
+
+A função `convert2df()` é usada para ler os dados exportados das bases e transformá-los em data frames organizados, prontos para análise.
+
+::: {.number-list}
+(1) Importar dados da Web of Science (*.txt*)
+:::
+
+::: fragment
+```{r, eval=F}
+library(bibliometrix)
+
+df_wos <- convert2df(
+  file = "tecnicas-pesquisa-economia/dados/savedrecs.txt",
+  dbsource = "wos",
+  format = "plaintext"
+)
+```
+```{r, echo=F, results='hide'}
+library(bibliometrix)
+
+df_wos <- bibliometrix::convert2df(
+  file = "C:/Users/andre/Documents/Faculdade/Monitoria/github/monitorias-ufdpar/tecnicas-pesquisa-economia/dados/savedrecs.txt",
+  dbsource = "wos",
+  format = "plaintext"
+)
+```
+:::
+
+::: {.number-list}
+(2) Importar dados da Scopus (*.csv*)
+:::
+
+::: fragment
+```{r, eval=F}
+df_scopus <- convert2df(
+  file = "tecnicas-pesquisa-economia/dados/scopus.csv",
+  dbsource = "scopus",
+  format = "csv"
+)
+```
+```{r, echo=F, results='hide'}
+df_scopus <- bibliometrix::convert2df(
+  file = "C:/Users/andre/Documents/Faculdade/Monitoria/github/monitorias-ufdpar/tecnicas-pesquisa-economia/dados/scopus.csv",
+  dbsource = "scopus",
+  format = "csv"
+)
+```
+:::
+
+# Importação de dados bibliográficos {.center visibility="uncounted"}
+
+Após importar os dados da Web of Science e Scopus separadamente, como demonstrado em `1.` e `2.`, podemos combinar estes dados em um único data frame.
+
+```{r, eval=F}
+dados <- mergeDbSources(df_wos, df_scopus, remove.duplicated = TRUE)
+```
+```{r, echo=F, results='hide'}
+dados <- bibliometrix::mergeDbSources(df_wos, df_scopus, remove.duplicated = T)
+```
+
+# Sobre os dados gerados pelo bibliometrix {.center}
+
+Quando importamos e transformamos os dados com `convert2df()`, o `bibliometrix` organiza as informações em uma tabela (data frame) com linhas e colunas.
+
+```{r, echo=F}
+as_tibble(dados) |> select(PY, AU, TI, SO, DE, TC, DT, AU_UN) |> glimpse(width = 80)
+```
+- **Esses são apenas alguns dos campos mais usados.** O glossário completo dos códigos de campos (Field Tags) pode ser acessado [aqui](https://www.bibliometrix.org/documents/Field_Tags_bibliometrix.pdf).
+
+# Análise bibliométrica básica {.center}
+
+A função `biblioAnalysis()` realiza uma análise exploratória automática dos dados bibliográficos importados.
+
+- Esta função gera várias estatísticas descritivas, como:
+
+::: columns
+::: {.column width="50%" .fragment}
+<a style="color:#028DB7;">→</a> Número de autores
+
+<a style="color:#028DB7;">→</a> Número de documentos
+
+<a style="color:#028DB7;">→</a> Revistas que mais publicaram
+:::
+::: {.column width="50%" .fragment}
+<a style="color:#028DB7;">→</a> Autores mais produtivos
+
+<a style="color:#028DB7;">→</a> Citações recebidas
+
+<a style="color:#028DB7;">→</a> Palavras-chave mais usadas
+:::
+:::
+
+::: fragment
+```{r}
+resultado <- biblioAnalysis(dados)
+```
+:::
+
+- Depois de fazer a análise, pode-se usar `summary()` para resumir e visualizar as principais informações.
+
+::: fragment
+```{r, eval=F}
+summary(resultado, k = 10)
+```
+:::
+
+# Visualização dos resultados {.center}
+
+Após realizar a análise bibliométrica básica, pode-se visualizar os principais resultados de forma gráfica usando a função `plot()`.
+
+```{r, eval=F}
+plot(resultado)
+```
+```{r, echo=F, fig.show="hide"}
+resultados_lista <- plot(resultado)
+```
+```{r, echo=F, fig.align="center"}
+resultados_lista$AnnualScientProd
+```
+
+# Leitura no biblioshiny {.center}
+
+**Por que exportar a base?**
+
+- O Biblioshiny (interface gráfica do bibliometrix) permite carregar dados manualmente a partir de um arquivo *.xlsx*.
+
+- Assim, se quisermos analisar uma base já tratada no R dentro do Biblioshiny, precisamos exportá-la para o formato Excel.
+   - Utilizamos a função `write.xlsx()` do pacote `openxlsx` para salvar o data frame como um arquivo *.xlsx*.
+
+::: fragment
+```{r, eval=FALSE}
+write.xlsx(x = dados,
+           file = "dados/dados.xlsx", 
+           rowNames = FALSE)
+```
+:::
+
+# Leitura no biblioshiny {.center visibility="uncounted"}
+
+<div style="text-align: center;">
+<div style="color: #313130; font-weight:bold; font-size:0.7em;">Na interface do biblioshiny (biblioshiny) > Load Data > Load Bibliometrix file(s) > Arquivo exportado em *.xlsx*</div>
+![](images/biblioshiny.png){.border .shadow-border height="400"}
+</div>
+
+# Exercício de Fixação II {.center .center-x background-color="#00263A"}
+
+Utilizando a palavra-chave *"Climate Change Policy"*, e considerando um escopo temporal dos últimos 10 anos (de 2015 a 2024), realize a atividade proposta a seguir.
+
+(a) Acesse uma das bases de dados disponíveis, Web of Science ou Scopus, por meio do Portal de Periódicos da CAPES. Após obter os resultados da pesquisa, exporte o conjunto de dados em formato *Plaintext* (.*txt*), caso utilize a Web of Science, ou em formato CSV (.*csv*), caso utilize a Scopus.
+
+(b) Após importar os dados para o R, utilize a função `biblioAnalysis()` para gerar uma análise bibliométrica exploratória básica. Em seguida, execute `biblioshiny()` para abrir a interface gráfica do bibliometrix.
+
+# Referências {.unnumbered}
+
+::: {#refs}
+:::

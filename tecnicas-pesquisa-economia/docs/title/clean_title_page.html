@@ -1,0 +1,25 @@
+<style>
+  .hide {
+    display: none !important;
+  }
+</style>
+
+<script>
+  function hideSlideNumber() {
+    let slideNo = document.querySelector('div.slide-number');
+    slideNo.classList.add('hide');
+  }
+
+  window.onload = function() {
+    hideSlideNumber();
+
+    Reveal.on('slidechanged', event => {
+      let slideNo = document.querySelector('div.slide-number');
+      if (Reveal.isFirstSlide()) {
+        slideNo.classList.add('hide');
+      } else {
+        slideNo.classList.remove('hide');
+      }
+    });
+  };
+</script>

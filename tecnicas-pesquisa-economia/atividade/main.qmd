@@ -1,0 +1,69 @@
+---
+title: "Exercício de Fixação"
+subtitle: "Monitoria I de Técnicas de Pesquisa em Economia"
+author:
+  - name: andre.melo@ufdpar.edu.br
+date: today
+date-format: long
+lang: pt-BR
+format: 
+      pdf:
+        mainfont: Times New Roman
+        number-depth: 3
+        fig-pos: 'H'
+---
+
+# Exercício 1
+
+Os dados utilizados neste exercício estão disponíveis no Github:
+
+```{r}
+url <- paste0(
+  "https://raw.githubusercontent.com/drewmelo/monitorias-ufdpar/",
+  "tecnicas-pesquisa-economia/dados/medium_dados.csv"
+)
+```
+
+Utilize as funções do dplyr para resolver as questões abaixo.
+
+**(a)  Importação dos dados**
+
+Importe o arquivo *medium_dados.csv*.
+
+*Dica: é necessário passar o objeto url dentro da função read_csv().*
+
+**(b) Cálculo de estatísticas resumidas**
+
+A partir do objeto criado em (a):
+
+- Agrupe os dados pela coluna *publicadora*;
+
+- Calcule:
+   - A média do tempo de leitura (*tempo_de_leitura*);
+   - O total de respostas (*respostas*);
+   - O total de curtidas (*curtidas*).
+
+*Dica: use group_by() para agrupar e reframe() para calcular. Lembre-se de utilizar na.rm = T nos cálculos.*
+
+**(c) Criação de uma lista**
+
+Crie três vetores, conforme o exemplo abaixo:
+
+```{r}
+# Vetor numérico (inteiro)
+ano <- c(2022, 2023, 2024, 2025)
+
+# Vetor de caracteres
+revistas <- c("A", "B", "C", "B")
+
+# Vetor numérico (números reais)
+impacto <- c(2.75, 1.91, 5.23, 0.87)
+```
+
+Depois, construa uma lista chamada lista_final que contenha:
+
+- O objeto criado no item (b);
+
+- Os vetores *ano*, *revistas* e *impacto*.
+
+*Dica: use a função list() para juntar vários objetos em uma lista.*

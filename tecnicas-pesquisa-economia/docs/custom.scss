@@ -1,0 +1,156 @@
+/*-- scss:defaults --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+$presentation-heading-color:#028db7;
+$presentation-heading-text-transform: uppercase;
+$presentation-heading-font-weight: 500;
+
+$color_base:#028DB7;
+$body-color:#313130 !default;
+$color_accent: #028DB7 !default;
+$body_bg: #ffffff !default;
+
+$link-color:#028db7;
+$presentation-title-slide-text-align: left;
+$presentation-font-smaller: .8;
+
+$code-block-font-size:  0.6em;
+$code-color:#028db7;
+$code-block-border-color:rgb(210, 219, 219) !default;
+/*-- scss:rules --*/
+
+$right-arrow: "\2192"; // Unicode character for right arrow
+
+.title-slide-bg {
+  background-color: #4CAF50 !important; /* Exemplo de cor de fundo */
+  color: white !important; /* Cor do texto */
+}
+
+/* Sombreado em imagens */
+.shadow-border {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  border-radius: 8px; /* opcional: adiciona bordas arredondadas */
+}
+
+
+.center-text {
+  text-align: center;
+}
+
+.reveal h1 {
+  font-weight: bold; // Títulos com #
+  font-size: 1.5em !important;
+}
+
+.reveal h2 {
+  font-weight: bold; // Títulos com ##
+}
+
+.reveal h3 {
+  font-style: italic; // Títulos com ###
+  font-size: 1.0em !important;
+}
+
+
+// Estilização personalizada para listas com setas diferenciadas
+
+// lists
+
+// Unordered lists
+
+.reveal ul {
+  font-weight: 300;
+  padding-left: 16px;
+
+  li::marker {
+    color: mix($color_base, white, 70%);
+  }
+}
+
+.reveal ul ul {
+  list-style: none;
+
+  li:before {
+    content: $right-arrow;
+    color: mix($color_base, white, 60%);
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    margin-right: 0.5em;
+  }
+}
+
+// Ordered lists
+
+.reveal ol {
+  font-weight: 300;
+  padding-left: 16px;
+
+  li::marker {
+    color: $color_base;
+  }
+}
+
+.reveal ol ul {
+  list-style: none;
+
+  li:before {
+    content: $right-arrow;
+    color: mix($color_base, white, 60%);
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    margin-right: 0.5em;
+  }
+}
+
+/* Estilo GT para tabelas em slides */
+.reveal table {
+  width: 90%;
+  margin: auto;
+  border-collapse: collapse;
+  font-size: 0.9em;
+}
+
+.reveal thead {
+  border-top: 2px solid #bbb;
+  border-bottom: 2px solid #bbb;
+}
+
+.reveal tbody tr {
+  border-bottom: 1px solid #bbb;
+}
+
+.reveal th, .reveal td {
+  text-align: left;
+  padding: 10px 12px;
+}
+
+.reveal th {
+  font-weight: bold;
+  color: #313130;
+}
+
+.csl-entry a {
+  text-decoration: none;
+  color: inherit;
+  pointer-events: none;
+  cursor: text;
+}
+
+.reveal #refs {
+  font-size: 0.7em; /* ou 70%, ajuste como quiser */
+}
+
+.number-list ol li::marker {
+  color: #028DB7;
+  margin-left: 1em;
+  margin-right: 0.5em;
+  font-weight: bold;
+}
