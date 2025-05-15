@@ -3,7 +3,7 @@ title: "Exercício de Fixação"
 subtitle: "Monitoria I de Técnicas de Pesquisa em Economia"
 author:
   - name: andre.melo@ufdpar.edu.br
-date: today
+date: "2025-05-16"
 date-format: long
 lang: pt-BR
 format: 
@@ -20,7 +20,7 @@ Os dados utilizados neste exercício estão disponíveis no Github:
 ```{r}
 url <- paste0(
   "https://raw.githubusercontent.com/drewmelo/monitorias-ufdpar/",
-  "tecnicas-pesquisa-economia/dados/medium_dados.csv"
+  "master/tecnicas-pesquisa-economia/dados/medium_dados.csv"
 )
 ```
 

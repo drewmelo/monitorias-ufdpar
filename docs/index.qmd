@@ -20,7 +20,7 @@ format:
     background-transition: fade
     slide-level: 2
     logo: logo/ufdpar_logo.png
-    footer: "[https://github.com/drewmelo/introducao-R](https://github.com/drewmelo/introducao-R)"
+    footer: "[https://drewmelo.github.io/monitorias-ufdpar](https://drewmelo.github.io/monitorias-ufdpar)"
     slide-number: true
     controls: true
     smaller: true
@@ -204,7 +204,7 @@ library(tidyverse)
 
 # Operador pipe {.center}
 
-O operador pipe no R é uma ferramenta poderosa para encadear operações e facilitar a leitura e escrita de código. Existem dois operadores de pipe comuns:
+O operador pipe no R é uma ferramenta poderosa para **encadear operações e facilitar a leitura e escrita de código**. Existem dois operadores de pipe comuns:
 
 -   Operador `%>%` (pipe do pacote `magrittr`)
 
@@ -212,7 +212,7 @@ O operador pipe no R é uma ferramenta poderosa para encadear operações e faci
 
 -   Operador `|>` (pipe do pacote base)
 
-    -   Introduzido no R 4.1.0, o operador pipe nativo `|>` é uma alternativa ao operador do `magrittr`, oferencendo uma maneira semelhante de encadear operações.
+    -   Introduzido no R 4.1.0, o operador pipe nativo `|>` é uma alternativa ao operador do `magrittr`.
 
 # R como calculadora {.center}
 
@@ -266,7 +266,7 @@ sqrt(16)
 ::: columns
 ::: {.column width="50%"}
 ::: {.fragment .fade-in-then-semi-out}
-Na linguagem R, há várias estruturas de dados fundamentais que são usadas para armazenar e manipular informações de maneiras específicas.
+Na linguagem R, há várias estruturas de dados fundamentais que são usadas para armazenar e manipular informações de várias maneiras.
 :::
 
 -   **Vetores**: Unidimensionais;
@@ -443,7 +443,7 @@ dados |>
 
 # Exportação de dados {.center}
 
-Exportar dados é uma tarefa comum no R, especialmente quando se deseja salvar resultados de análises ou compartilhar informações com outros usuários.
+Exportar dados é uma tarefa comum no R quando se deseja salvar resultados de análises ou compartilhar informações com outros usuários.
 
 ::: {.number-list}
 (1) Exportando para CSV
@@ -451,7 +451,7 @@ Exportar dados é uma tarefa comum no R, especialmente quando se deseja salvar r
 
 ::: fragment
 ```{r, eval=FALSE}
-write.csv(dados, file = "dados/dados.csv", row.names = FALSE)
+write.csv(dados, file = "tecnicas-pesquisa-economia/dados/dados.csv", row.names = FALSE)
 ```
 :::
 
@@ -464,7 +464,7 @@ write.csv(dados, file = "dados/dados.csv", row.names = FALSE)
 # Ativando pacote
 library(openxlsx) # Necessário instalar
 
-write.xlsx(dados, file = "dados/dados.xlsx", rowNames = FALSE)
+write.xlsx(dados, file = "tecnicas-pesquisa-economia/dados/dados.xlsx", rowNames = FALSE)
 ```
 :::
 
@@ -474,7 +474,7 @@ write.xlsx(dados, file = "dados/dados.xlsx", rowNames = FALSE)
 
 ::: fragment
 ```{r, eval=FALSE}
-write.table(dados, file = "dados/dados.txt", sep = "\t", row.names = FALSE)
+write.table(dados, file = "tecnicas-pesquisa-economia/dados/dados.txt", sep = "\t", row.names = FALSE)
 ```
 :::
 
@@ -488,7 +488,7 @@ Neste caso, ao importar dados no R, estaremos carregando conjuntos de dados exte
 
 ::: fragment
 ```{r, eval=FALSE}
-readr::read_csv(file = "dados/dados.csv")
+readr::read_csv(file = "tecnicas-pesquisa-economia/dados/dados.csv")
 ```
 :::
 
@@ -501,7 +501,7 @@ readr::read_csv(file = "dados/dados.csv")
 # Ativando o pacote
 library(readxl) # Necessário instalar
 
-readxl::read_excel(path = "dados/dados.xlsx")
+readxl::read_excel(path = "tecnicas-pesquisa-economia/dados/dados.xlsx")
 ```
 :::
 
@@ -511,7 +511,7 @@ readxl::read_excel(path = "dados/dados.xlsx")
 
 ::: fragment
 ```{r, eval=FALSE}
-read.table(file = "dados/dados.txt", header = TRUE, sep = "\t")
+read.table(file = "tecnicas-pesquisa-economia/dados/dados.txt", header = TRUE, sep = "\t")
 ```
 :::
 
@@ -519,7 +519,7 @@ read.table(file = "dados/dados.txt", header = TRUE, sep = "\t")
 
 Hora de praticar!
 
-Acesse o arquivo **main.pdf**, que está dentro da pasta *atividade*, localizada em *"tecnicas-pesquisa-economia"* no repositório *monitorias-ufdpar*, ou clique [aqui](https://github.com/drewmelo/introducao-R/blob/master/atividade/atividade.pdf) para acessá-lo diretamente.
+Acesse o arquivo **main.pdf**, que está dentro da pasta *atividade*, localizada em *"tecnicas-pesquisa-economia"* no repositório *monitorias-ufdpar*, ou clique [aqui](https://github.com/drewmelo/monitorias-ufdpar/blob/master/tecnicas-pesquisa-economia/atividade/main.pdf) para acessá-lo diretamente.
 
 # III - Bibliometria com o R {style="font-size:1.5em;"}
 

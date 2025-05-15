@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.4.551">
 
   <meta name="author" content="André Vitor Pereira de Melo">
-  <title>quarto-input9504ceb3</title>
+  <title>quarto-input99a8cf0d</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -628,7 +628,7 @@ Passo 4: <a style="color: #313130;" href=""> Digite o nome da sua pasta em <em>D
 
 <section id="operador-pipe" class="title-slide slide level1 center">
 <h1>Operador pipe</h1>
-<p>O operador pipe no R é uma ferramenta poderosa para encadear operações e facilitar a leitura e escrita de código. Existem dois operadores de pipe comuns:</p>
+<p>O operador pipe no R é uma ferramenta poderosa para <strong>encadear operações e facilitar a leitura e escrita de código</strong>. Existem dois operadores de pipe comuns:</p>
 <ul>
 <li class="fragment"><p>Operador <code>%&gt;%</code> (pipe do pacote <code>magrittr</code>)</p>
 <ul>
@@ -636,7 +636,7 @@ Passo 4: <a style="color: #313130;" href=""> Digite o nome da sua pasta em <em>D
 </ul></li>
 <li class="fragment"><p>Operador <code>|&gt;</code> (pipe do pacote base)</p>
 <ul>
-<li class="fragment">Introduzido no R 4.1.0, o operador pipe nativo <code>|&gt;</code> é uma alternativa ao operador do <code>magrittr</code>, oferencendo uma maneira semelhante de encadear operações.</li>
+<li class="fragment">Introduzido no R 4.1.0, o operador pipe nativo <code>|&gt;</code> é uma alternativa ao operador do <code>magrittr</code>.</li>
 </ul></li>
 </ul>
 </section>
@@ -713,7 +713,7 @@ Passo 4: <a style="color: #313130;" href=""> Digite o nome da sua pasta em <em>D
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="fragment fade-in-then-semi-out">
-<p>Na linguagem R, há várias estruturas de dados fundamentais que são usadas para armazenar e manipular informações de maneiras específicas.</p>
+<p>Na linguagem R, há várias estruturas de dados fundamentais que são usadas para armazenar e manipular informações de várias maneiras.</p>
 </div>
 <ul>
 <li class="fragment"><strong>Vetores</strong>: Unidimensionais;</li>
@@ -908,7 +908,7 @@ Passo 4: <a style="color: #313130;" href=""> Digite o nome da sua pasta em <em>D
 
 <section id="exportação-de-dados" class="title-slide slide level1 center">
 <h1>Exportação de dados</h1>
-<p>Exportar dados é uma tarefa comum no R, especialmente quando se deseja salvar resultados de análises ou compartilhar informações com outros usuários.</p>
+<p>Exportar dados é uma tarefa comum no R quando se deseja salvar resultados de análises ou compartilhar informações com outros usuários.</p>
 <div class="number-list">
 <ol type="1">
 <li class="fragment">Exportando para CSV</li>
@@ -916,7 +916,7 @@ Passo 4: <a style="color: #313130;" href=""> Digite o nome da sua pasta em <em>D
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href=""></a><span class="fu">write.csv</span>(dados, <span class="at">file =</span> <span class="st">"dados/dados.csv"</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href=""></a><span class="fu">write.csv</span>(dados, <span class="at">file =</span> <span class="st">"tecnicas-pesquisa-economia/dados/dados.csv"</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div class="number-list">
@@ -929,7 +929,7 @@ Passo 4: <a style="color: #313130;" href=""> Digite o nome da sua pasta em <em>D
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href=""></a><span class="co"># Ativando pacote</span></span>
 <span id="cb24-2"><a href=""></a><span class="fu">library</span>(openxlsx) <span class="co"># Necessário instalar</span></span>
 <span id="cb24-3"><a href=""></a></span>
-<span id="cb24-4"><a href=""></a><span class="fu">write.xlsx</span>(dados, <span class="at">file =</span> <span class="st">"dados/dados.xlsx"</span>, <span class="at">rowNames =</span> <span class="cn">FALSE</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb24-4"><a href=""></a><span class="fu">write.xlsx</span>(dados, <span class="at">file =</span> <span class="st">"tecnicas-pesquisa-economia/dados/dados.xlsx"</span>, <span class="at">rowNames =</span> <span class="cn">FALSE</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div class="number-list">
@@ -939,7 +939,7 @@ Passo 4: <a style="color: #313130;" href=""> Digite o nome da sua pasta em <em>D
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href=""></a><span class="fu">write.table</span>(dados, <span class="at">file =</span> <span class="st">"dados/dados.txt"</span>, <span class="at">sep =</span> <span class="st">"</span><span class="sc">\t</span><span class="st">"</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href=""></a><span class="fu">write.table</span>(dados, <span class="at">file =</span> <span class="st">"tecnicas-pesquisa-economia/dados/dados.txt"</span>, <span class="at">sep =</span> <span class="st">"</span><span class="sc">\t</span><span class="st">"</span>, <span class="at">row.names =</span> <span class="cn">FALSE</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
@@ -954,7 +954,7 @@ Passo 4: <a style="color: #313130;" href=""> Digite o nome da sua pasta em <em>D
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href=""></a>readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="at">file =</span> <span class="st">"dados/dados.csv"</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href=""></a>readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="at">file =</span> <span class="st">"tecnicas-pesquisa-economia/dados/dados.csv"</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div class="number-list">
@@ -967,7 +967,7 @@ Passo 4: <a style="color: #313130;" href=""> Digite o nome da sua pasta em <em>D
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href=""></a><span class="co"># Ativando o pacote</span></span>
 <span id="cb27-2"><a href=""></a><span class="fu">library</span>(readxl) <span class="co"># Necessário instalar</span></span>
 <span id="cb27-3"><a href=""></a></span>
-<span id="cb27-4"><a href=""></a>readxl<span class="sc">::</span><span class="fu">read_excel</span>(<span class="at">path =</span> <span class="st">"dados/dados.xlsx"</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb27-4"><a href=""></a>readxl<span class="sc">::</span><span class="fu">read_excel</span>(<span class="at">path =</span> <span class="st">"tecnicas-pesquisa-economia/dados/dados.xlsx"</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div class="number-list">
@@ -977,7 +977,7 @@ Passo 4: <a style="color: #313130;" href=""> Digite o nome da sua pasta em <em>D
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href=""></a><span class="fu">read.table</span>(<span class="at">file =</span> <span class="st">"dados/dados.txt"</span>, <span class="at">header =</span> <span class="cn">TRUE</span>, <span class="at">sep =</span> <span class="st">"</span><span class="sc">\t</span><span class="st">"</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href=""></a><span class="fu">read.table</span>(<span class="at">file =</span> <span class="st">"tecnicas-pesquisa-economia/dados/dados.txt"</span>, <span class="at">header =</span> <span class="cn">TRUE</span>, <span class="at">sep =</span> <span class="st">"</span><span class="sc">\t</span><span class="st">"</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
@@ -985,7 +985,7 @@ Passo 4: <a style="color: #313130;" href=""> Digite o nome da sua pasta em <em>D
 <section id="exercício-de-fixação-i" class="title-slide slide level1 center center-x" data-background-color="#00263A">
 <h1>Exercício de Fixação I</h1>
 <p>Hora de praticar!</p>
-<p>Acesse o arquivo <strong>main.pdf</strong>, que está dentro da pasta <em>atividade</em>, localizada em <em>“tecnicas-pesquisa-economia”</em> no repositório <em>monitorias-ufdpar</em>, ou clique <a href="https://github.com/drewmelo/introducao-R/blob/master/atividade/atividade.pdf">aqui</a> para acessá-lo diretamente.</p>
+<p>Acesse o arquivo <strong>main.pdf</strong>, que está dentro da pasta <em>atividade</em>, localizada em <em>“tecnicas-pesquisa-economia”</em> no repositório <em>monitorias-ufdpar</em>, ou clique <a href="https://github.com/drewmelo/monitorias-ufdpar/blob/master/tecnicas-pesquisa-economia/atividade/main.pdf">aqui</a> para acessá-lo diretamente.</p>
 </section>
 
 <section id="iii---bibliometria-com-o-r" class="title-slide slide level1 center" style="font-size:1.5em;">
@@ -1347,7 +1347,7 @@ STAUFFER, R.; CHIMIAK-OPOKA, J.; RODRÍGUEZ-R, L. M.; SIMON, T.; ZEILEIS, A. <st
 <div class="quarto-auto-generated-content">
 <p><img src="logo/ufdpar_logo.png" class="slide-logo"></p>
 <div class="footer footer-default">
-<p><a href="https://github.com/drewmelo/introducao-R">https://github.com/drewmelo/introducao-R</a></p>
+<p><a href="https://drewmelo.github.io/monitorias-ufdpar">https://drewmelo.github.io/monitorias-ufdpar</a></p>
 </div>
 </div>
 </section>
