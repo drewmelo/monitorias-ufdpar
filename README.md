@@ -50,5 +50,5 @@ Para reproduzir os exemplos e exercícios, é recomendável ter instalados:
 ## Como clonar o repositório
 
 ```bash
-git clone https://github.com/SEU_USUARIO/monitorias-ufdpar.git
+git clone https://github.com/drewmelo/monitorias-ufdpar.git
 ```
