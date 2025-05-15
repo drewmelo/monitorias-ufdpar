@@ -34,7 +34,6 @@ format:
       echo: true
     bibliography: referencias.bib
     csl: abnt.csl
-    self-contained: true
 ---
 
 # I - Introdução ao R {style="font-size:1.5em;"}
