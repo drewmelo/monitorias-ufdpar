@@ -44,26 +44,3 @@ A partir do objeto criado em (a):
    - O total de curtidas (*curtidas*).
 
 *Dica: use group_by() para agrupar e reframe() para calcular. Lembre-se de utilizar na.rm = T nos cálculos.*
-
-**(c) Criação de uma lista**
-
-Crie três vetores, conforme o exemplo abaixo:
-
-```{r}
-# Vetor numérico (inteiro)
-ano <- c(2022, 2023, 2024, 2025)
-
-# Vetor de caracteres
-revistas <- c("A", "B", "C", "B")
-
-# Vetor numérico (números reais)
-impacto <- c(2.75, 1.91, 5.23, 0.87)
-```
-
-Depois, construa uma lista chamada lista_final que contenha:
-
-- O objeto criado no item (b);
-
-- Os vetores *ano*, *revistas* e *impacto*.
-
-*Dica: use a função list() para juntar vários objetos em uma lista.*
