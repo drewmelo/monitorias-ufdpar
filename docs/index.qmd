@@ -9,7 +9,7 @@ author:
   - name: André Vitor Pereira de Melo
     email: andre.melo@ufdpar.edu.br
     affiliations: Universidade Federal do Delta do Parnaíba
-subtitle: "Monitoria I de Técnicas de Pesquisa em Economia"
+subtitle: "Monitoria I e II de Técnicas de Pesquisa em Economia"
 date: "2025-05-16"
 date-format: long
 lang: pt-BR
