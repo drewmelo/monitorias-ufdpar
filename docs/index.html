@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.4.551">
 
   <meta name="author" content="André Vitor Pereira de Melo">
-  <title>quarto-input12c7c635</title>
+  <title>quarto-input9e312800</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -430,7 +430,7 @@ André Vitor Pereira de Melo
     </div>
 </div>
 
-  <p class="date">16 de maio de 2025</p>
+  <p class="date">23 de maio de 2025</p>
 </section>
 <section id="i---introdução-ao-r" class="title-slide slide level1 center" style="font-size:1.5em;">
 <h1>I - Introdução ao R</h1>
@@ -1229,16 +1229,16 @@ Passo 4: <a style="color: #313130;" href=""> Interface da Scopus. </a>
 <p>Quando importamos e transformamos os dados com <code>convert2df()</code>, o <code>bibliometrix</code> organiza as informações em uma tabela (data frame) com linhas e colunas.</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>Rows: 477
+<pre><code>Rows: 681
 Columns: 8
-$ PY    &lt;dbl&gt; 2024, 2023, 2024, 2024, 2017, 2023, 2018, 2024, 2015, 2020, 2022…
-$ AU    &lt;chr&gt; "WILDOWICZ-SZUMARSKA A;OWSIAK K", "CEVIK S;JALLES J", "HUYNH C;H…
-$ TI    &lt;chr&gt; "IMPACT OF CLIMATE CHANGE ON INCOME INEQUALITY IMPLICATIONS FOR …
-$ SO    &lt;chr&gt; "ECONOMICS AND ENVIRONMENT", "ENERGY POLICY", "JOURNAL OF THE AS…
-$ DE    &lt;chr&gt; "CLIMATE CHANGE; INCOME INEQUALITY; ECONOMIC GROWTH", "INCOME IN…
-$ TC    &lt;dbl&gt; 1, 29, 4, 11, 22, 2, 24, 2, 58, 4, 8, 21, 6, 5, 0, 11, 19, 1, 0,…
-$ DT    &lt;chr&gt; "ARTICLE", "ARTICLE", "ARTICLE; EARLY ACCESS", "ARTICLE", "ARTIC…
-$ AU_UN &lt;chr&gt; "UNIVERSITY OF BIALYSTOK;CRACOW UNIVERSITY OF ECONOMICS", "INTER…</code></pre>
+$ PY    &lt;dbl&gt; 2018, 2018, 2020, 2021, 2019, 2022, 2021, 2022, 2016, 2021, 2023…
+$ AU    &lt;chr&gt; "OISHI S;KUSHLEV K;SCHIMMACK U", "KIM H", "BARNES L", "NADIROV O…
+$ TI    &lt;chr&gt; "PROGRESSIVE TAXATION INCOME INEQUALITY AND HAPPINESS", "SOME MO…
+$ SO    &lt;chr&gt; "AMERICAN PSYCHOLOGIST", "COMMUNICATIONS OF THE KOREAN MATHEMATI…
+$ DE    &lt;chr&gt; "HAPPINESS; PROGRESSIVE TAXATION; INCOME INEQUALITY", "PROGRESSI…
+$ TC    &lt;dbl&gt; 71, 1, 4, 6, 2, 9, 0, 0, 2, 3, 1, 4, 4, 22, 2, 9, 23, 10, 26, 0,…
+$ DT    &lt;chr&gt; "ARTICLE", "ARTICLE", "ARTICLE", "ARTICLE", "ARTICLE", "ARTICLE"…
+$ AU_UN &lt;chr&gt; "UNIVERSITY OF VIRGINIA;UNIVERSITY OF TORONTO;UNIVERSITY TORONTO…</code></pre>
 </div>
 </div>
 <ul>
@@ -1318,7 +1318,7 @@ Na interface do biblioshiny (biblioshiny) &gt; Load Data &gt; Load Bibliometrix 
 
 <section id="exercício-de-fixação-ii" class="title-slide slide level1 center center-x" data-background-color="#00263A">
 <h1>Exercício de Fixação II</h1>
-<p>Utilizando a palavra-chave <em>“Climate Change Policy”</em>, e considerando um escopo temporal dos últimos 10 anos (de 2015 a 2024), realize a atividade proposta a seguir.</p>
+<p>Utilizando a palavra-chave <em>“climate change”</em> e <em>“income inequality”</em>, realize a atividade proposta a seguir.</p>
 <ol type="a">
 <li class="fragment"><p>Acesse uma das bases de dados disponíveis, Web of Science ou Scopus, por meio do Portal de Periódicos da CAPES. Após obter os resultados da pesquisa, exporte o conjunto de dados em formato <em>Plaintext</em> (.<em>txt</em>), caso utilize a Web of Science, ou em formato CSV (.<em>csv</em>), caso utilize a Scopus.</p></li>
 <li class="fragment"><p>Após importar os dados para o R, utilize a função <code>biblioAnalysis()</code> para gerar uma análise bibliométrica exploratória básica. Em seguida, execute <code>biblioshiny()</code> para abrir a interface gráfica do bibliometrix.</p></li>

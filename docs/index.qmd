@@ -10,7 +10,7 @@ author:
     email: andre.melo@ufdpar.edu.br
     affiliations: Universidade Federal do Delta do Parnaíba
 subtitle: "Monitoria I e II de Técnicas de Pesquisa em Economia"
-date: "2025-05-16"
+date: "2025-05-23"
 date-format: long
 lang: pt-BR
 format: 
@@ -829,7 +829,7 @@ write.xlsx(x = dados,
 
 # Exercício de Fixação II {.center .center-x background-color="#00263A"}
 
-Utilizando a palavra-chave *"Climate Change Policy"*, e considerando um escopo temporal dos últimos 10 anos (de 2015 a 2024), realize a atividade proposta a seguir.
+Utilizando a palavra-chave *"climate change"* e *"income inequality"*, realize a atividade proposta a seguir.
 
 (a) Acesse uma das bases de dados disponíveis, Web of Science ou Scopus, por meio do Portal de Periódicos da CAPES. Após obter os resultados da pesquisa, exporte o conjunto de dados em formato *Plaintext* (.*txt*), caso utilize a Web of Science, ou em formato CSV (.*csv*), caso utilize a Scopus.
 
